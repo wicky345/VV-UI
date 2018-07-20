@@ -356,11 +356,11 @@
 </script>
 
 <style>
-  .el-table .warning-row {
+  .ox-table .warning-row {
     background: oldlace;
   }
 
-  .el-table .success-row {
+  .ox-table .success-row {
     background: #f0f9eb;
   }
 
@@ -373,7 +373,7 @@
       width: 90px;
       color: #99a9bf;
     }
-    .el-form-item {
+    .ox-form-item {
       margin-right: 0;
       margin-bottom: 0;
       width: 50%;
@@ -389,27 +389,27 @@
 
 基础的表格展示用法。
 
-:::demo 当`el-table`元素中注入`data`对象数组后，在`el-table-column`中用`prop`属性来对应对象中的键名即可填入数据，用`label`属性来定义表格的列名。可以使用`width`属性来定义列宽。
+:::demo 当`ox-table`元素中注入`data`对象数组后，在`ox-table-column`中用`prop`属性来对应对象中的键名即可填入数据，用`label`属性来定义表格的列名。可以使用`width`属性来定义列宽。
 ```html
   <template>
-    <el-table
+    <ox-table
       :data="tableData"
       style="width: 100%">
-      <el-table-column
+      <ox-table-column
         prop="date"
         label="日期"
         width="180">
-      </el-table-column>
-      <el-table-column
+      </ox-table-column>
+      <ox-table-column
         prop="name"
         label="姓名"
         width="180">
-      </el-table-column>
-      <el-table-column
+      </ox-table-column>
+      <ox-table-column
         prop="address"
         label="地址">
-      </el-table-column>
-    </el-table>
+      </ox-table-column>
+    </ox-table>
   </template>
 
   <script>
@@ -447,25 +447,25 @@
 :::demo `stripe`属性可以创建带斑马纹的表格。它接受一个`Boolean`，默认为`false`，设置为`true`即为启用。
 ```html
 <template>
-  <el-table
+  <ox-table
     :data="tableData"
     stripe
     style="width: 100%">
-    <el-table-column
+    <ox-table-column
       prop="date"
       label="日期"
       width="180">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="name"
       label="姓名"
       width="180">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="address"
       label="地址">
-    </el-table-column>
-  </el-table>
+    </ox-table-column>
+  </ox-table>
 </template>
 
 <script>
@@ -501,25 +501,25 @@
 :::demo 默认情况下，Table 组件是不具有竖直方向的边框的，如果需要，可以使用`border`属性，它接受一个`Boolean`，设置为`true`即可启用。
 ```html
 <template>
-  <el-table
+  <ox-table
     :data="tableData"
     border
     style="width: 100%">
-    <el-table-column
+    <ox-table-column
       prop="date"
       label="日期"
       width="180">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="name"
       label="姓名"
       width="180">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="address"
       label="地址">
-    </el-table-column>
-  </el-table>
+    </ox-table-column>
+  </ox-table>
 </template>
 
 <script>
@@ -557,33 +557,33 @@
 :::demo 可以通过指定 Table 组件的 `row-class-name` 属性来为 Table 中的某一行添加 class，表明该行处于某种状态。
 ```html
 <template>
-  <el-table
+  <ox-table
     :data="tableData2"
     style="width: 100%"
     :row-class-name="tableRowClassName">
-    <el-table-column
+    <ox-table-column
       prop="date"
       label="日期"
       width="180">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="name"
       label="姓名"
       width="180">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="address"
       label="地址">
-    </el-table-column>
-  </el-table>
+    </ox-table-column>
+  </ox-table>
 </template>
 
 <style>
-  .el-table .warning-row {
+  .ox-table .warning-row {
     background: oldlace;
   }
 
-  .el-table .success-row {
+  .ox-table .success-row {
     background: #f0f9eb;
   }
 </style>
@@ -630,29 +630,29 @@
 
 纵向内容过多时，可选择固定表头。
 
-:::demo 只要在`el-table`元素中定义了`height`属性，即可实现固定表头的表格，而不需要额外的代码。
+:::demo 只要在`ox-table`元素中定义了`height`属性，即可实现固定表头的表格，而不需要额外的代码。
 ```html
 <template>
-  <el-table
+  <ox-table
     :data="tableData3"
     height="250"
     border
     style="width: 100%">
-    <el-table-column
+    <ox-table-column
       prop="date"
       label="日期"
       width="180">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="name"
       label="姓名"
       width="180">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="address"
       label="地址">
-    </el-table-column>
-  </el-table>
+    </ox-table-column>
+  </ox-table>
 </template>
 
 <script>
@@ -702,51 +702,51 @@
 :::demo 固定列需要使用`fixed`属性，它接受 Boolean 值或者`left` `right`，表示左边固定还是右边固定。
 ```html
 <template>
-  <el-table
+  <ox-table
     :data="tableData"
     border
     style="width: 100%">
-    <el-table-column
+    <ox-table-column
       fixed
       prop="date"
       label="日期"
       width="150">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="name"
       label="姓名"
       width="120">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="province"
       label="省份"
       width="120">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="city"
       label="市区"
       width="120">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="address"
       label="地址"
       width="300">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="zip"
       label="邮编"
       width="120">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       fixed="right"
       label="操作"
       width="100">
       <template slot-scope="scope">
-        <el-button @click="handleClick(scope.row)" type="text" size="small">查看</el-button>
-        <el-button type="text" size="small">编辑</el-button>
+        <ox-button @click="handleClick(scope.row)" type="text" size="small">查看</ox-button>
+        <ox-button type="text" size="small">编辑</ox-button>
       </template>
-    </el-table-column>
-  </el-table>
+    </ox-table-column>
+  </ox-table>
 </template>
 
 <script>
@@ -802,42 +802,42 @@
 :::demo 固定列和表头可以同时使用，只需要将上述两个属性分别设置好即可。
 ```html
 <template>
-  <el-table
+  <ox-table
     :data="tableData3"
     style="width: 100%"
     height="250">
-    <el-table-column
+    <ox-table-column
       fixed
       prop="date"
       label="日期"
       width="150">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="name"
       label="姓名"
       width="120">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="province"
       label="省份"
       width="120">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="city"
       label="市区"
       width="120">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="address"
       label="地址"
       width="300">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="zip"
       label="邮编"
       width="120">
-    </el-table-column>
-  </el-table>
+    </ox-table-column>
+  </ox-table>
 </template>
 
 <script>
@@ -908,55 +908,55 @@
 :::demo 通过设置`max-height`属性为 Table 指定最大高度。此时若表格所需的高度大于最大高度，则会显示一个滚动条。
 ```html
 <template>
-  <el-table
+  <ox-table
     :data="tableData4"
     style="width: 100%"
     max-height="250">
-    <el-table-column
+    <ox-table-column
       fixed
       prop="date"
       label="日期"
       width="150">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="name"
       label="姓名"
       width="120">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="province"
       label="省份"
       width="120">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="city"
       label="市区"
       width="120">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="address"
       label="地址"
       width="300">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="zip"
       label="邮编"
       width="120">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       fixed="right"
       label="操作"
       width="120">
       <template slot-scope="scope">
-        <el-button
+        <ox-button
           @click.native.prevent="deleteRow(scope.$index, tableData4)"
           type="text"
           size="small">
           移除
-        </el-button>
+        </ox-button>
       </template>
-    </el-table-column>
-  </el-table>
+    </ox-table-column>
+  </ox-table>
 </template>
 
 <script>
@@ -1029,47 +1029,47 @@
 
 数据结构比较复杂的时候，可使用多级表头来展现数据的层次关系。
 
-:::demo 只需要在 el-table-column 里面嵌套 el-table-column，就可以实现多级表头。
+:::demo 只需要在 ox-table-column 里面嵌套 ox-table-column，就可以实现多级表头。
 ```html
 <template>
-  <el-table
+  <ox-table
     :data="tableData3"
     style="width: 100%">
-    <el-table-column
+    <ox-table-column
       prop="date"
       label="日期"
       width="150">
-    </el-table-column>
-    <el-table-column label="配送信息">
-      <el-table-column
+    </ox-table-column>
+    <ox-table-column label="配送信息">
+      <ox-table-column
         prop="name"
         label="姓名"
         width="120">
-      </el-table-column>
-      <el-table-column label="地址">
-        <el-table-column
+      </ox-table-column>
+      <ox-table-column label="地址">
+        <ox-table-column
           prop="province"
           label="省份"
           width="120">
-        </el-table-column>
-        <el-table-column
+        </ox-table-column>
+        <ox-table-column
           prop="city"
           label="市区"
           width="120">
-        </el-table-column>
-        <el-table-column
+        </ox-table-column>
+        <ox-table-column
           prop="address"
           label="地址"
           width="300">
-        </el-table-column>
-        <el-table-column
+        </ox-table-column>
+        <ox-table-column
           prop="zip"
           label="邮编"
           width="120">
-        </el-table-column>
-      </el-table-column>
-    </el-table-column>
-  </el-table>
+        </ox-table-column>
+      </ox-table-column>
+    </ox-table-column>
+  </ox-table>
 </template>
 
 <script>
@@ -1137,37 +1137,37 @@
 
 选择单行数据时使用色块表示。
 
-:::demo Table 组件提供了单选的支持，只需要配置`highlight-current-row`属性即可实现单选。之后由`current-change`事件来管理选中时触发的事件，它会传入`currentRow`，`oldCurrentRow`。如果需要显示索引，可以增加一列`el-table-column`，设置`type`属性为`index`即可显示从 1 开始的索引号。
+:::demo Table 组件提供了单选的支持，只需要配置`highlight-current-row`属性即可实现单选。之后由`current-change`事件来管理选中时触发的事件，它会传入`currentRow`，`oldCurrentRow`。如果需要显示索引，可以增加一列`ox-table-column`，设置`type`属性为`index`即可显示从 1 开始的索引号。
 ```html
 <template>
-  <el-table
+  <ox-table
     ref="singleTable"
     :data="tableData"
     highlight-current-row
     @current-change="handleCurrentChange"
     style="width: 100%">
-    <el-table-column
+    <ox-table-column
       type="index"
       width="50">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       property="date"
       label="日期"
       width="120">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       property="name"
       label="姓名"
       width="120">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       property="address"
       label="地址">
-    </el-table-column>
-  </el-table>
+    </ox-table-column>
+  </ox-table>
   <div style="margin-top: 20px">
-    <el-button @click="setCurrent(tableData[1])">选中第二行</el-button>
-    <el-button @click="setCurrent()">取消选择</el-button>
+    <ox-button @click="setCurrent(tableData[1])">选中第二行</ox-button>
+    <ox-button @click="setCurrent()">取消选择</ox-button>
   </div>
 </template>
 
@@ -1213,38 +1213,38 @@
 
 选择多行数据时使用 Checkbox。
 
-:::demo 实现多选非常简单: 手动添加一个`el-table-column`，设`type`属性为`selection`即可；默认情况下若内容过多会折行显示，若需要单行显示可以使用`show-overflow-tooltip`属性，它接受一个`Boolean`，为`true`时多余的内容会在 hover 时以 tooltip 的形式显示出来。
+:::demo 实现多选非常简单: 手动添加一个`ox-table-column`，设`type`属性为`selection`即可；默认情况下若内容过多会折行显示，若需要单行显示可以使用`show-overflow-tooltip`属性，它接受一个`Boolean`，为`true`时多余的内容会在 hover 时以 tooltip 的形式显示出来。
 ```html
 <template>
-  <el-table
+  <ox-table
     ref="multipleTable"
     :data="tableData3"
     tooltip-effect="dark"
     style="width: 100%"
     @selection-change="handleSelectionChange">
-    <el-table-column
+    <ox-table-column
       type="selection"
       width="55">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       label="日期"
       width="120">
       <template slot-scope="scope">{{ scope.row.date }}</template>
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="name"
       label="姓名"
       width="120">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="address"
       label="地址"
       show-overflow-tooltip>
-    </el-table-column>
-  </el-table>
+    </ox-table-column>
+  </ox-table>
   <div style="margin-top: 20px">
-    <el-button @click="toggleSelection([tableData3[1], tableData3[2]])">切换第二、第三行的选中状态</el-button>
-    <el-button @click="toggleSelection()">取消选择</el-button>
+    <ox-button @click="toggleSelection([tableData3[1], tableData3[2]])">切换第二、第三行的选中状态</ox-button>
+    <ox-button @click="toggleSelection()">取消选择</ox-button>
   </div>
 </template>
 
@@ -1311,29 +1311,29 @@
 :::demo 在列中设置`sortable`属性即可实现以该列为基准的排序，接受一个`Boolean`，默认为`false`。可以通过 Table 的`default-sort`属性设置默认的排序列和排序顺序。可以使用`sort-method`或者`sort-by`使用自定义的排序规则。如果需要后端排序，需将`sortable`设置为`custom`，同时在 Table 上监听`sort-change`事件，在事件回调中可以获取当前排序的字段名和排序顺序，从而向接口请求排序后的表格数据。在本例中，我们还使用了`formatter`属性，它用于格式化指定列的值，接受一个`Function`，会传入两个参数：`row`和`column`，可以根据自己的需求进行处理。
 ```html
 <template>
-  <el-table
+  <ox-table
     :data="tableData"
     style="width: 100%"
     :default-sort = "{prop: 'date', order: 'descending'}"
     >
-    <el-table-column
+    <ox-table-column
       prop="date"
       label="日期"
       sortable
       width="180">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="name"
       label="姓名"
       sortable
       width="180">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="address"
       label="地址"
       :formatter="formatter">
-    </el-table-column>
-  </el-table>
+    </ox-table-column>
+  </ox-table>
 </template>
 
 <script>
@@ -1376,10 +1376,10 @@
 :::demo 在列中设置`filters` `filter-method`属性即可开启该列的筛选，filters 是一个数组，`filter-method`是一个方法，它用于决定某些数据是否显示，会传入三个参数：`value`, `row` 和 `column`。
 ```html
 <template>
-  <el-table
+  <ox-table
     :data="tableData"
     style="width: 100%">
-    <el-table-column
+    <ox-table-column
       prop="date"
       label="日期"
       sortable
@@ -1387,18 +1387,18 @@
       :filters="[{text: '2016-05-01', value: '2016-05-01'}, {text: '2016-05-02', value: '2016-05-02'}, {text: '2016-05-03', value: '2016-05-03'}, {text: '2016-05-04', value: '2016-05-04'}]"
       :filter-method="filterHandler"
     >
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="name"
       label="姓名"
       width="180">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="address"
       label="地址"
       :formatter="formatter">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="tag"
       label="标签"
       width="100"
@@ -1406,12 +1406,12 @@
       :filter-method="filterTag"
       filter-placement="bottom-end">
       <template slot-scope="scope">
-        <el-tag
+        <ox-tag
           :type="scope.row.tag === '家' ? 'primary' : 'success'"
-          disable-transitions>{{scope.row.tag}}</el-tag>
+          disable-transitions>{{scope.row.tag}}</ox-tag>
       </template>
-    </el-table-column>
-  </el-table>
+    </ox-table-column>
+  </ox-table>
 </template>
 
 <script>
@@ -1464,42 +1464,42 @@
 :::demo 通过 `Scoped slot` 可以获取到 row, column, $index 和 store（table 内部的状态管理）的数据，用法参考 demo。
 ```html
 <template>
-  <el-table
+  <ox-table
     :data="tableData"
     style="width: 100%">
-    <el-table-column
+    <ox-table-column
       label="日期"
       width="180">
       <template slot-scope="scope">
-        <i class="el-icon-time"></i>
+        <i class="ox-icon-time"></i>
         <span style="margin-left: 10px">{{ scope.row.date }}</span>
       </template>
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       label="姓名"
       width="180">
       <template slot-scope="scope">
-        <el-popover trigger="hover" placement="top">
+        <ox-popover trigger="hover" placement="top">
           <p>姓名: {{ scope.row.name }}</p>
           <p>住址: {{ scope.row.address }}</p>
           <div slot="reference" class="name-wrapper">
-            <el-tag size="medium">{{ scope.row.name }}</el-tag>
+            <ox-tag size="medium">{{ scope.row.name }}</ox-tag>
           </div>
-        </el-popover>
+        </ox-popover>
       </template>
-    </el-table-column>
-    <el-table-column label="操作">
+    </ox-table-column>
+    <ox-table-column label="操作">
       <template slot-scope="scope">
-        <el-button
+        <ox-button
           size="mini"
-          @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
-        <el-button
+          @click="handleEdit(scope.$index, scope.row)">编辑</ox-button>
+        <ox-button
           size="mini"
           type="danger"
-          @click="handleDelete(scope.$index, scope.row)">删除</el-button>
+          @click="handleDelete(scope.$index, scope.row)">删除</ox-button>
       </template>
-    </el-table-column>
-  </el-table>
+    </ox-table-column>
+  </ox-table>
 </template>
 
 <script>
@@ -1541,52 +1541,52 @@
 ### 展开行
 
 当行内容过多并且不想显示横向滚动条时，可以使用 Table 展开行功能。
-:::demo 通过设置 type="expand" 和 `Scoped slot` 可以开启展开行功能，`el-table-column` 的模板会被渲染成为展开行的内容，展开行可访问的属性与使用自定义列模板时的 `Scoped slot` 相同。
+:::demo 通过设置 type="expand" 和 `Scoped slot` 可以开启展开行功能，`ox-table-column` 的模板会被渲染成为展开行的内容，展开行可访问的属性与使用自定义列模板时的 `Scoped slot` 相同。
 ```html
 <template>
-  <el-table
+  <ox-table
     :data="tableData5"
     style="width: 100%">
-    <el-table-column type="expand">
+    <ox-table-column type="expand">
       <template slot-scope="props">
-        <el-form label-position="left" inline class="demo-table-expand">
-          <el-form-item label="商品名称">
+        <ox-form label-position="left" inline class="demo-table-expand">
+          <ox-form-item label="商品名称">
             <span>{{ props.row.name }}</span>
-          </el-form-item>
-          <el-form-item label="所属店铺">
+          </ox-form-item>
+          <ox-form-item label="所属店铺">
             <span>{{ props.row.shop }}</span>
-          </el-form-item>
-          <el-form-item label="商品 ID">
+          </ox-form-item>
+          <ox-form-item label="商品 ID">
             <span>{{ props.row.id }}</span>
-          </el-form-item>
-          <el-form-item label="店铺 ID">
+          </ox-form-item>
+          <ox-form-item label="店铺 ID">
             <span>{{ props.row.shopId }}</span>
-          </el-form-item>
-          <el-form-item label="商品分类">
+          </ox-form-item>
+          <ox-form-item label="商品分类">
             <span>{{ props.row.category }}</span>
-          </el-form-item>
-          <el-form-item label="店铺地址">
+          </ox-form-item>
+          <ox-form-item label="店铺地址">
             <span>{{ props.row.address }}</span>
-          </el-form-item>
-          <el-form-item label="商品描述">
+          </ox-form-item>
+          <ox-form-item label="商品描述">
             <span>{{ props.row.desc }}</span>
-          </el-form-item>
-        </el-form>
+          </ox-form-item>
+        </ox-form>
       </template>
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       label="商品 ID"
       prop="id">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       label="商品名称"
       prop="name">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       label="描述"
       prop="desc">
-    </el-table-column>
-  </el-table>
+    </ox-table-column>
+  </ox-table>
 </template>
 
 <style>
@@ -1597,7 +1597,7 @@
     width: 90px;
     color: #99a9bf;
   }
-  .demo-table-expand .el-form-item {
+  .demo-table-expand .ox-form-item {
     margin-right: 0;
     margin-bottom: 0;
     width: 50%;
@@ -1654,66 +1654,66 @@
 :::demo 将`show-summary`设置为`true`就会在表格尾部展示合计行。默认情况下，对于合计行，第一列不进行数据求合操作，而是显示「合计」二字（可通过`sum-text`配置），其余列会将本列所有数值进行求合操作，并显示出来。当然，你也可以定义自己的合计逻辑。使用`summary-method`并传入一个方法，返回一个数组，这个数组中的各项就会显示在合计行的各列中，具体可以参考本例中的第二个表格。
 ```html
 <template>
-  <el-table
+  <ox-table
     :data="tableData6"
     border
     show-summary
     style="width: 100%">
-    <el-table-column
+    <ox-table-column
       prop="id"
       label="ID"
       width="180">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="name"
       label="姓名">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="amount1"
       sortable
       label="数值 1">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="amount2"
       sortable
       label="数值 2">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="amount3"
       sortable
       label="数值 3">
-    </el-table-column>
-  </el-table>
+    </ox-table-column>
+  </ox-table>
 
-  <el-table
+  <ox-table
     :data="tableData6"
     border
     height="200"
     :summary-method="getSummaries"
     show-summary
     style="width: 100%; margin-top: 20px">
-    <el-table-column
+    <ox-table-column
       prop="id"
       label="ID"
       width="180">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="name"
       label="姓名">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="amount1"
       label="数值 1（元）">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="amount2"
       label="数值 2（元）">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="amount3"
       label="数值 3（元）">
-    </el-table-column>
-  </el-table>
+    </ox-table-column>
+  </ox-table>
 </template>
 
 <script>
@@ -1794,64 +1794,64 @@
 ```html
 <template>
   <div>
-    <el-table
+    <ox-table
       :data="tableData6"
       :span-method="arraySpanMethod"
       border
       style="width: 100%">
-      <el-table-column
+      <ox-table-column
         prop="id"
         label="ID"
         width="180">
-      </el-table-column>
-      <el-table-column
+      </ox-table-column>
+      <ox-table-column
         prop="name"
         label="姓名">
-      </el-table-column>
-      <el-table-column
+      </ox-table-column>
+      <ox-table-column
         prop="amount1"
         sortable
         label="数值 1">
-      </el-table-column>
-      <el-table-column
+      </ox-table-column>
+      <ox-table-column
         prop="amount2"
         sortable
         label="数值 2">
-      </el-table-column>
-      <el-table-column
+      </ox-table-column>
+      <ox-table-column
         prop="amount3"
         sortable
         label="数值 3">
-      </el-table-column>
-    </el-table>
+      </ox-table-column>
+    </ox-table>
 
-    <el-table
+    <ox-table
       :data="tableData6"
       :span-method="objectSpanMethod"
       border
       style="width: 100%; margin-top: 20px">
-      <el-table-column
+      <ox-table-column
         prop="id"
         label="ID"
         width="180">
-      </el-table-column>
-      <el-table-column
+      </ox-table-column>
+      <ox-table-column
         prop="name"
         label="姓名">
-      </el-table-column>
-      <el-table-column
+      </ox-table-column>
+      <ox-table-column
         prop="amount1"
         label="数值 1（元）">
-      </el-table-column>
-      <el-table-column
+      </ox-table-column>
+      <ox-table-column
         prop="amount2"
         label="数值 2（元）">
-      </el-table-column>
-      <el-table-column
+      </ox-table-column>
+      <ox-table-column
         prop="amount3"
         label="数值 3（元）">
-      </el-table-column>
-    </el-table>
+      </ox-table-column>
+    </ox-table>
   </div>
 </template>
 
@@ -1931,28 +1931,28 @@
 
 ```html
 <template>
-  <el-table
+  <ox-table
     :data="tableData"
     style="width: 100%">
-    <el-table-column
+    <ox-table-column
       type="index"
       :index="indexMethod">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="date"
       label="日期"
       width="180">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="name"
       label="姓名"
       width="180">
-    </el-table-column>
-    <el-table-column
+    </ox-table-column>
+    <ox-table-column
       prop="address"
       label="地址">
-    </el-table-column>
-  </el-table>
+    </ox-table-column>
+  </ox-table>
 </template>
 
 <script>
@@ -2091,7 +2091,7 @@
 | sort-method | 对数据进行排序的时候使用的方法，仅当 sortable 设置为 true 的时候有效，需返回一个数字，和 Array.sort 表现一致 | Function(a, b) | — | — |
 | sort-by | 指定数据按照哪个属性进行排序，仅当 sortable 设置为 true 且没有设置 sort-method 的时候有效。如果 sort-by 为数组，则先按照第 1 个属性排序，如果第 1 个相等，再按照第 2 个排序，以此类推 | String/Array/Function(row, index) | — | — |
 | sort-orders | 数据在排序时所使用排序策略的轮转顺序，仅当 sortable 为 true 时有效。需传入一个数组，随着用户点击表头，该列依次按照数组中元素的顺序进行排序 | array | 数组中的元素需为以下三者之一：`ascending` 表示升序，`descending` 表示降序，`null` 表示还原为原始顺序 | ['ascending', 'descending', null] |
-| resizable | 对应列是否可以通过拖动改变宽度（需要在 el-table 上设置 border 属性为真） | boolean | — | true |
+| resizable | 对应列是否可以通过拖动改变宽度（需要在 ox-table 上设置 border 属性为真） | boolean | — | true |
 | formatter | 用来格式化内容 | Function(row, column, cellValue, index) | — | — |
 | show-overflow-tooltip | 当内容过长被隐藏时显示 tooltip | Boolean | — | false |
 | align | 对齐方式 | String | left/center/right | left |
