@@ -100,40 +100,40 @@
 
 按钮样式的单选组合。
 
-:::demo 只需要把`el-radio`元素换成`el-radio-button`元素即可，此外，Element 还提供了`size`属性。
+:::demo 只需要把`ox-radio`元素换成`ox-radio-button`元素即可，此外，Element 还提供了`size`属性。
 ```html
 <template>
   <div>
-    <el-radio-group v-model="radio3">
-      <el-radio-button label="上海"></el-radio-button>
-      <el-radio-button label="北京"></el-radio-button>
-      <el-radio-button label="广州"></el-radio-button>
-      <el-radio-button label="深圳"></el-radio-button>
-    </el-radio-group>
+    <ox-radio-group v-model="radio3">
+      <ox-radio-button label="上海"></ox-radio-button>
+      <ox-radio-button label="北京"></ox-radio-button>
+      <ox-radio-button label="广州"></ox-radio-button>
+      <ox-radio-button label="深圳"></ox-radio-button>
+    </ox-radio-group>
   </div>
   <div style="margin-top: 20px">
-    <el-radio-group v-model="radio4" size="medium">
-      <el-radio-button label="上海" ></el-radio-button>
-      <el-radio-button label="北京"></el-radio-button>
-      <el-radio-button label="广州"></el-radio-button>
-      <el-radio-button label="深圳"></el-radio-button>
-    </el-radio-group>
+    <ox-radio-group v-model="radio4" size="medium">
+      <ox-radio-button label="上海" ></ox-radio-button>
+      <ox-radio-button label="北京"></ox-radio-button>
+      <ox-radio-button label="广州"></ox-radio-button>
+      <ox-radio-button label="深圳"></ox-radio-button>
+    </ox-radio-group>
   </div>
   <div style="margin-top: 20px">
-    <el-radio-group v-model="radio5" size="small">
-      <el-radio-button label="上海"></el-radio-button>
-      <el-radio-button label="北京" disabled ></el-radio-button>
-      <el-radio-button label="广州"></el-radio-button>
-      <el-radio-button label="深圳"></el-radio-button>
-    </el-radio-group>
+    <ox-radio-group v-model="radio5" size="small">
+      <ox-radio-button label="上海"></ox-radio-button>
+      <ox-radio-button label="北京" disabled ></ox-radio-button>
+      <ox-radio-button label="广州"></ox-radio-button>
+      <ox-radio-button label="深圳"></ox-radio-button>
+    </ox-radio-group>
   </div>
   <div style="margin-top: 20px">
-    <el-radio-group v-model="radio6" disabled size="mini">
-      <el-radio-button label="上海"></el-radio-button>
-      <el-radio-button label="北京"></el-radio-button>
-      <el-radio-button label="广州"></el-radio-button>
-      <el-radio-button label="深圳"></el-radio-button>
-    </el-radio-group>
+    <ox-radio-group v-model="radio6" disabled size="mini">
+      <ox-radio-button label="上海"></ox-radio-button>
+      <ox-radio-button label="北京"></ox-radio-button>
+      <ox-radio-button label="广州"></ox-radio-button>
+      <ox-radio-button label="深圳"></ox-radio-button>
+    </ox-radio-group>
   </div>
 </template>
 
@@ -158,24 +158,24 @@
 ```html
 <template>
   <div>
-    <el-radio v-model="radio7" label="1" border>备选项1</el-radio>
-    <el-radio v-model="radio7" label="2" border>备选项2</el-radio>
+    <ox-radio v-model="radio7" label="1" border>备选项1</ox-radio>
+    <ox-radio v-model="radio7" label="2" border>备选项2</ox-radio>
   </div>
   <div style="margin-top: 20px">
-    <el-radio v-model="radio8" label="1" border size="medium">备选项1</el-radio>
-    <el-radio v-model="radio8" label="2" border size="medium">备选项2</el-radio>
+    <ox-radio v-model="radio8" label="1" border size="medium">备选项1</ox-radio>
+    <ox-radio v-model="radio8" label="2" border size="medium">备选项2</ox-radio>
   </div>
   <div style="margin-top: 20px">
-    <el-radio-group v-model="radio9" size="small">
-      <el-radio label="1" border>备选项1</el-radio>
-      <el-radio label="2" border disabled>备选项2</el-radio>
-    </el-radio-group>
+    <ox-radio-group v-model="radio9" size="small">
+      <ox-radio label="1" border>备选项1</ox-radio>
+      <ox-radio label="2" border disabled>备选项2</ox-radio>
+    </ox-radio-group>
   </div>
   <div style="margin-top: 20px">
-    <el-radio-group v-model="radio10" size="mini" disabled>
-      <el-radio label="1" border>备选项1</el-radio>
-      <el-radio label="2" border>备选项2</el-radio>
-    </el-radio-group>
+    <ox-radio-group v-model="radio10" size="mini" disabled>
+      <ox-radio label="1" border>备选项1</ox-radio>
+      <ox-radio label="2" border>备选项2</ox-radio>
+    </ox-radio-group> 
   </div>
 </template>
 
