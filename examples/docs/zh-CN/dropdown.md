@@ -1,17 +1,17 @@
 <style>
   .demo-box {
-    .el-dropdown {
+    .ox-dropdown {
       vertical-align: top;
 
-      & + .el-dropdown {
+      & + .ox-dropdown {
         margin-left: 15px;
       }
     }
-    .el-dropdown-link {
+    .ox-dropdown-link {
       cursor: pointer;
       color: #409EFF;
     }
-    .el-icon-arrow-down {
+    .ox-icon-arrow-down {
       font-size: 12px;
     }
   }
@@ -19,7 +19,7 @@
   .block-col-2 {
     margin: -24px;
 
-    .el-col {
+    .ox-col {
       padding: 30px 0;
       text-align: center;
       border-right: 1px solid #eff2f6;
@@ -61,26 +61,26 @@
 :::demo 通过组件`slot`来设置下拉触发的元素以及需要通过具名`slot`为`dropdown` 来设置下拉菜单。默认情况下，下拉按钮只要`hover`即可，无需点击也会显示下拉菜单。
 
 ```html
-<el-dropdown>
-  <span class="el-dropdown-link">
-    下拉菜单<i class="el-icon-arrow-down el-icon--right"></i>
+<ox-dropdown>
+  <span class="ox-dropdown-link">
+    下拉菜单<i class="ox-icon-arrow-down ox-icon--right"></i>
   </span>
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>黄金糕</el-dropdown-item>
-    <el-dropdown-item>狮子头</el-dropdown-item>
-    <el-dropdown-item>螺蛳粉</el-dropdown-item>
-    <el-dropdown-item disabled>双皮奶</el-dropdown-item>
-    <el-dropdown-item divided>蚵仔煎</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <ox-dropdown-menu slot="dropdown">
+    <ox-dropdown-item>黄金糕</ox-dropdown-item>
+    <ox-dropdown-item>狮子头</ox-dropdown-item>
+    <ox-dropdown-item>螺蛳粉</ox-dropdown-item>
+    <ox-dropdown-item disabled>双皮奶</ox-dropdown-item>
+    <ox-dropdown-item divided>蚵仔煎</ox-dropdown-item>
+  </ox-dropdown-menu>
+</ox-dropdown>
 ```
 
 <style>
-  .el-dropdown-link {
+  .ox-dropdown-link {
     cursor: pointer;
     color: #409EFF;
   }
-  .el-icon-arrow-down {
+  .ox-icon-arrow-down {
     font-size: 12px;
   }
 </style>
@@ -94,37 +94,37 @@
 :::demo 设置`split-button`属性来让触发下拉元素呈现为按钮组，左边是功能按钮，右边是触发下拉菜单的按钮，设置为`true`即可。
 
 ```html
-<el-dropdown>
-  <el-button type="primary">
-    更多菜单<i class="el-icon-arrow-down el-icon--right"></i>
-  </el-button>
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>黄金糕</el-dropdown-item>
-    <el-dropdown-item>狮子头</el-dropdown-item>
-    <el-dropdown-item>螺蛳粉</el-dropdown-item>
-    <el-dropdown-item>双皮奶</el-dropdown-item>
-    <el-dropdown-item>蚵仔煎</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
-<el-dropdown split-button type="primary" @click="handleClick">
+<ox-dropdown>
+  <ox-button type="primary">
+    更多菜单<i class="ox-icon-arrow-down ox-icon--right"></i>
+  </ox-button>
+  <ox-dropdown-menu slot="dropdown">
+    <ox-dropdown-item>黄金糕</ox-dropdown-item>
+    <ox-dropdown-item>狮子头</ox-dropdown-item>
+    <ox-dropdown-item>螺蛳粉</ox-dropdown-item>
+    <ox-dropdown-item>双皮奶</ox-dropdown-item>
+    <ox-dropdown-item>蚵仔煎</ox-dropdown-item>
+  </ox-dropdown-menu>
+</ox-dropdown>
+<ox-dropdown split-button type="primary" @click="handleClick">
   更多菜单
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>黄金糕</el-dropdown-item>
-    <el-dropdown-item>狮子头</el-dropdown-item>
-    <el-dropdown-item>螺蛳粉</el-dropdown-item>
-    <el-dropdown-item>双皮奶</el-dropdown-item>
-    <el-dropdown-item>蚵仔煎</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <ox-dropdown-menu slot="dropdown">
+    <ox-dropdown-item>黄金糕</ox-dropdown-item>
+    <ox-dropdown-item>狮子头</ox-dropdown-item>
+    <ox-dropdown-item>螺蛳粉</ox-dropdown-item>
+    <ox-dropdown-item>双皮奶</ox-dropdown-item>
+    <ox-dropdown-item>蚵仔煎</ox-dropdown-item>
+  </ox-dropdown-menu>
+</ox-dropdown>
 
 <style>
-  .el-dropdown {
+  .ox-dropdown {
     vertical-align: top;
   }
-  .el-dropdown + .el-dropdown {
+  .ox-dropdown + .ox-dropdown {
     margin-left: 15px;
   }
-  .el-icon-arrow-down {
+  .ox-icon-arrow-down {
     font-size: 12px;
   }
 </style>
@@ -148,46 +148,46 @@
 
 :::demo 在`trigger`属性设置为`click`即可。
 ```html
-<el-row class="block-col-2">
-  <el-col :span="12">
+<ox-row class="block-col-2">
+  <ox-col :span="12">
     <span class="demonstration">hover 激活</span>
-    <el-dropdown>
-      <span class="el-dropdown-link">
-        下拉菜单<i class="el-icon-arrow-down el-icon--right"></i>
+    <ox-dropdown>
+      <span class="ox-dropdown-link">
+        下拉菜单<i class="ox-icon-arrow-down ox-icon--right"></i>
       </span>
-      <el-dropdown-menu slot="dropdown">
-        <el-dropdown-item>黄金糕</el-dropdown-item>
-        <el-dropdown-item>狮子头</el-dropdown-item>
-        <el-dropdown-item>螺蛳粉</el-dropdown-item>
-        <el-dropdown-item>双皮奶</el-dropdown-item>
-        <el-dropdown-item>蚵仔煎</el-dropdown-item>
-      </el-dropdown-menu>
-    </el-dropdown>
-  </el-col>
-  <el-col :span="12">
+      <ox-dropdown-menu slot="dropdown">
+        <ox-dropdown-item>黄金糕</ox-dropdown-item>
+        <ox-dropdown-item>狮子头</ox-dropdown-item>
+        <ox-dropdown-item>螺蛳粉</ox-dropdown-item>
+        <ox-dropdown-item>双皮奶</ox-dropdown-item>
+        <ox-dropdown-item>蚵仔煎</ox-dropdown-item>
+      </ox-dropdown-menu>
+    </ox-dropdown>
+  </ox-col>
+  <ox-col :span="12">
     <span class="demonstration">click 激活</span>
-    <el-dropdown trigger="click">
-      <span class="el-dropdown-link">
-        下拉菜单<i class="el-icon-arrow-down el-icon--right"></i>
+    <ox-dropdown trigger="click">
+      <span class="ox-dropdown-link">
+        下拉菜单<i class="ox-icon-arrow-down ox-icon--right"></i>
       </span>
-      <el-dropdown-menu slot="dropdown">
-        <el-dropdown-item>黄金糕</el-dropdown-item>
-        <el-dropdown-item>狮子头</el-dropdown-item>
-        <el-dropdown-item>螺蛳粉</el-dropdown-item>
-        <el-dropdown-item>双皮奶</el-dropdown-item>
-        <el-dropdown-item>蚵仔煎</el-dropdown-item>
-      </el-dropdown-menu>
-    </el-dropdown>
-  </el-col>
-</el-row>
+      <ox-dropdown-menu slot="dropdown">
+        <ox-dropdown-item>黄金糕</ox-dropdown-item>
+        <ox-dropdown-item>狮子头</ox-dropdown-item>
+        <ox-dropdown-item>螺蛳粉</ox-dropdown-item>
+        <ox-dropdown-item>双皮奶</ox-dropdown-item>
+        <ox-dropdown-item>蚵仔煎</ox-dropdown-item>
+      </ox-dropdown-menu>
+    </ox-dropdown>
+  </ox-col>
+</ox-row>
 ```
 
 <style>
-  .el-dropdown-link {
+  .ox-dropdown-link {
     cursor: pointer;
     color: #409EFF;
   }
-  .el-icon-arrow-down {
+  .ox-icon-arrow-down {
     font-size: 12px;
   }
   .demonstration {
@@ -206,25 +206,25 @@
 
 :::demo 下拉菜单默认在点击菜单项后会被隐藏，将`hide-on-click`属性默认为`false`可以关闭此功能。
 ```html
-<el-dropdown :hide-on-click="false">
-  <span class="el-dropdown-link">
-    下拉菜单<i class="el-icon-arrow-down el-icon--right"></i>
+<ox-dropdown :hide-on-click="false">
+  <span class="ox-dropdown-link">
+    下拉菜单<i class="ox-icon-arrow-down ox-icon--right"></i>
   </span>
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>黄金糕</el-dropdown-item>
-    <el-dropdown-item>狮子头</el-dropdown-item>
-    <el-dropdown-item>螺蛳粉</el-dropdown-item>
-    <el-dropdown-item disabled>双皮奶</el-dropdown-item>
-    <el-dropdown-item divided>蚵仔煎</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <ox-dropdown-menu slot="dropdown">
+    <ox-dropdown-item>黄金糕</ox-dropdown-item>
+    <ox-dropdown-item>狮子头</ox-dropdown-item>
+    <ox-dropdown-item>螺蛳粉</ox-dropdown-item>
+    <ox-dropdown-item disabled>双皮奶</ox-dropdown-item>
+    <ox-dropdown-item divided>蚵仔煎</ox-dropdown-item>
+  </ox-dropdown-menu>
+</ox-dropdown>
 
 <style>
-  .el-dropdown-link {
+  .ox-dropdown-link {
     cursor: pointer;
     color: #409EFF;
   }
-  .el-icon-arrow-down {
+  .ox-icon-arrow-down {
     font-size: 12px;
   }
 </style>
@@ -237,25 +237,25 @@
 
 :::demo
 ```html
-<el-dropdown @command="handleCommand">
-  <span class="el-dropdown-link">
-    下拉菜单<i class="el-icon-arrow-down el-icon--right"></i>
+<ox-dropdown @command="handleCommand">
+  <span class="ox-dropdown-link">
+    下拉菜单<i class="ox-icon-arrow-down ox-icon--right"></i>
   </span>
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item command="a">黄金糕</el-dropdown-item>
-    <el-dropdown-item command="b">狮子头</el-dropdown-item>
-    <el-dropdown-item command="c">螺蛳粉</el-dropdown-item>
-    <el-dropdown-item command="d" disabled>双皮奶</el-dropdown-item>
-    <el-dropdown-item command="e" divided>蚵仔煎</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <ox-dropdown-menu slot="dropdown">
+    <ox-dropdown-item command="a">黄金糕</ox-dropdown-item>
+    <ox-dropdown-item command="b">狮子头</ox-dropdown-item>
+    <ox-dropdown-item command="c">螺蛳粉</ox-dropdown-item>
+    <ox-dropdown-item command="d" disabled>双皮奶</ox-dropdown-item>
+    <ox-dropdown-item command="e" divided>蚵仔煎</ox-dropdown-item>
+  </ox-dropdown-menu>
+</ox-dropdown>
 
 <style>
-  .el-dropdown-link {
+  .ox-dropdown-link {
     cursor: pointer;
     color: #409EFF;
   }
-  .el-icon-arrow-down {
+  .ox-icon-arrow-down {
     font-size: 12px;
   }
 </style>
@@ -279,49 +279,49 @@ Dropdown 组件提供除了默认值以外的三种尺寸，可以在不同场�
 :::demo 额外的尺寸：`medium`、`small`、`mini`，通过设置`size`属性来配置它们。
 
 ```html
-<el-dropdown split-button type="primary">
+<ox-dropdown split-button type="primary">
   默认尺寸
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>黄金糕</el-dropdown-item>
-    <el-dropdown-item>狮子头</el-dropdown-item>
-    <el-dropdown-item>螺蛳粉</el-dropdown-item>
-    <el-dropdown-item>双皮奶</el-dropdown-item>
-    <el-dropdown-item>蚵仔煎</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <ox-dropdown-menu slot="dropdown">
+    <ox-dropdown-item>黄金糕</ox-dropdown-item>
+    <ox-dropdown-item>狮子头</ox-dropdown-item>
+    <ox-dropdown-item>螺蛳粉</ox-dropdown-item>
+    <ox-dropdown-item>双皮奶</ox-dropdown-item>
+    <ox-dropdown-item>蚵仔煎</ox-dropdown-item>
+  </ox-dropdown-menu>
+</ox-dropdown>
 
-<el-dropdown size="medium" split-button type="primary">
+<ox-dropdown size="medium" split-button type="primary">
   中等尺寸
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>黄金糕</el-dropdown-item>
-    <el-dropdown-item>狮子头</el-dropdown-item>
-    <el-dropdown-item>螺蛳粉</el-dropdown-item>
-    <el-dropdown-item>双皮奶</el-dropdown-item>
-    <el-dropdown-item>蚵仔煎</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <ox-dropdown-menu slot="dropdown">
+    <ox-dropdown-item>黄金糕</ox-dropdown-item>
+    <ox-dropdown-item>狮子头</ox-dropdown-item>
+    <ox-dropdown-item>螺蛳粉</ox-dropdown-item>
+    <ox-dropdown-item>双皮奶</ox-dropdown-item>
+    <ox-dropdown-item>蚵仔煎</ox-dropdown-item>
+  </ox-dropdown-menu>
+</ox-dropdown>
 
-<el-dropdown size="small" split-button type="primary">
+<ox-dropdown size="small" split-button type="primary">
   小型尺寸
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>黄金糕</el-dropdown-item>
-    <el-dropdown-item>狮子头</el-dropdown-item>
-    <el-dropdown-item>螺蛳粉</el-dropdown-item>
-    <el-dropdown-item>双皮奶</el-dropdown-item>
-    <el-dropdown-item>蚵仔煎</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <ox-dropdown-menu slot="dropdown">
+    <ox-dropdown-item>黄金糕</ox-dropdown-item>
+    <ox-dropdown-item>狮子头</ox-dropdown-item>
+    <ox-dropdown-item>螺蛳粉</ox-dropdown-item>
+    <ox-dropdown-item>双皮奶</ox-dropdown-item>
+    <ox-dropdown-item>蚵仔煎</ox-dropdown-item>
+  </ox-dropdown-menu>
+</ox-dropdown>
 
-<el-dropdown size="mini" split-button type="primary">
+<ox-dropdown size="mini" split-button type="primary">
   超小尺寸
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>黄金糕</el-dropdown-item>
-    <el-dropdown-item>狮子头</el-dropdown-item>
-    <el-dropdown-item>螺蛳粉</el-dropdown-item>
-    <el-dropdown-item>双皮奶</el-dropdown-item>
-    <el-dropdown-item>蚵仔煎</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <ox-dropdown-menu slot="dropdown">
+    <ox-dropdown-item>黄金糕</ox-dropdown-item>
+    <ox-dropdown-item>狮子头</ox-dropdown-item>
+    <ox-dropdown-item>螺蛳粉</ox-dropdown-item>
+    <ox-dropdown-item>双皮奶</ox-dropdown-item>
+    <ox-dropdown-item>蚵仔煎</ox-dropdown-item>
+  </ox-dropdown-menu>
+</ox-dropdown>
 ```
 :::
 
