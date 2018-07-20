@@ -44,7 +44,7 @@ const LOAD_DOCS_MAP = {
 const loadDocs = function(lang, path) {
   return LOAD_DOCS_MAP[lang](path);
 };
-
+// 路由注册
 const registerRoute = (navConfig) => {
   let route = [];
   Object.keys(navConfig).forEach((lang, index) => {
@@ -76,6 +76,7 @@ const registerRoute = (navConfig) => {
     const component = page.path === '/changelog'
       ? load(lang, 'changelog')
       : loadDocs(lang, page.path);
+
     let child = {
       path: page.path.slice(1),
       meta: {

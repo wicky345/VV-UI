@@ -30,8 +30,8 @@
 
 ```html
 <template>
-  <el-radio v-model="radio" label="1">备选项</el-radio>
-  <el-radio v-model="radio" label="2">备选项</el-radio>
+  <ox-radio v-model="radio" label="1">备选项1</ox-radio>
+  <ox-radio v-model="radio" label="2">备选项2</ox-radio>
 </template>
 
 <script>
@@ -50,11 +50,11 @@
 
 单选框不可用的状态。
 
-:::demo 只要在`el-radio`元素中设置`disabled`属性即可，它接受一个`Boolean`，`true`为禁用。
+:::demo 只要在`ox-radio`元素中设置`disabled`属性即可，它接受一个`Boolean`，`true`为禁用。
 ```html
 <template>
-  <el-radio disabled v-model="radio1" label="禁用">备选项</el-radio>
-  <el-radio disabled v-model="radio1" label="选中且禁用">备选项</el-radio>
+  <ox-radio disabled v-model="radio1" label="禁用">备选项</ox-radio>
+  <ox-radio disabled v-model="radio1" label="选中且禁用">备选项</ox-radio>
 </template>
 
 <script>
@@ -73,15 +73,15 @@
 
 适用于在多个互斥的选项中选择的场景
 
-:::demo 结合`el-radio-group`元素和子元素`el-radio`可以实现单选组，在`el-radio-group`中绑定`v-model`，在`el-radio`中设置好`label`即可，无需再给每一个`el-radio`绑定变量，另外，还提供了`change`事件来响应变化，它会传入一个参数`value`。
+:::demo 结合`ox-radio-group`元素和子元素`ox-radio`可以实现单选组，在`ox-radio-group`中绑定`v-model`，在`ox-radio`中设置好`label`即可，无需再给每一个`ox-radio`绑定变量，另外，还提供了`change`事件来响应变化，它会传入一个参数`value`。
 
 ```html
 <template>
-  <el-radio-group v-model="radio2">
-    <el-radio :label="3">备选项</el-radio>
-    <el-radio :label="6">备选项</el-radio>
-    <el-radio :label="9">备选项</el-radio>
-  </el-radio-group>
+  <ox-radio-group v-model="radio2">
+    <ox-radio :label="3">备选项</ox-radio>
+    <ox-radio :label="6">备选项</ox-radio>
+    <ox-radio :label="9">备选项</ox-radio>
+  </ox-radio-group>
 </template>
 
 <script>
