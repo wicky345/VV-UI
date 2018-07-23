@@ -30,11 +30,11 @@
     margin-bottom: 20px;
   }
 
-  .demo-carousel .el-carousel__container {
+  .demo-carousel .ox-carousel__container {
     text-align: center;
   }
   
-  .demo-carousel .el-carousel__item {
+  .demo-carousel .ox-carousel__item {
     h3 {
       color: #fff;
       font-size: 18px;
