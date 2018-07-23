@@ -215,7 +215,7 @@
 ```html
 <ox-tabs type="border-card">
   <ox-tab-pane>
-    <span slot="label"><i class="el-icon-date"></i> 我的行程</span>
+    <span slot="label"><i class="ox-icon-date"></i> 我的行程</span>
     我的行程
   </ox-tab-pane>
   <ox-tab-pane label="消息中心">消息中心</ox-tab-pane>
